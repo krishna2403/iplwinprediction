@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>First Innings Score Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='ipl-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class='heading_first'> </span><span class="heading_second">Win Predictor for Indian Premier League (IPL)</span></h2>
+
+    	</div>
+
+        <!-- Prediction Area -->
+        <div class="prediction-area">
+
+   
+
+
+            <div class='div1'>
+                <form action="{{ url_for('win') }}" method="POST">
+                    <input class="form-input" type="text" name="overs" placeholder="Overs eg. 7.2"><br>
+                    <input class="form-input" type="text" name="runs" placeholder="Score"><br>
+                    <input class="form-input" type="text" name="wickets" placeholder="Wickets"><br>
+                    <input class="form-input" type="text" name="striker" placeholder="Striker"><br>
+                    <input class="form-input" type="text" name="nstriker" placeholder="Non-Striker"><br>
+                    <input class="form-input" type="text" name="striker_score" placeholder="Striker Score"><br>
+                    <input class="form-input" type="text" name="nstriker_score" placeholder="Non-Striker Score"><br>
+                    <input class="form-input" type="text" name="runs_in_prev_5" placeholder="Runs scored in previous 3 Overs"><br>
+                    <input class="form-input" type="text" name="wickets_in_prev_5" placeholder="Wickets taken in previous 3 Overs"><br>
+                    <input class="form-input" type="text" name="rem_runs" placeholder="Remaining Runs"><br>
+
+            <input   type="submit" style="margin-left: 23%" class="myButton" value="Predict Winning Team">
+            </form>
+            </div>
+            
+        </div>
+
+        <!-- Footer -->
+
+
+    </body>
+</html>
