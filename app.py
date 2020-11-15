@@ -30,10 +30,6 @@ def score():
     if request.method == 'GET':
         return render_template('predict_score.html')
     if request.method == 'POST':
-        
-        
-            
-            
         overs = float(request.form['overs'])
         runs = int(request.form['runs'])
         wickets = int(request.form['wickets'])
